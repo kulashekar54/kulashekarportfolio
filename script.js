@@ -1,4 +1,3 @@
-// ===== Theme Toggle =====
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
@@ -19,12 +18,12 @@ themeToggle.addEventListener('click', () => {
   themeToggle.textContent = isLight ? '☀️' : '🌙';
 });
 
-// ===== Smooth Scroll =====
+// Smooth scroll
 function scrollToSection(id) {
   document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
 }
 
-// ===== Navbar background on scroll =====
+// Navbar background change on scroll
 const header = document.getElementById('siteHeader');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) header.classList.add('scrolled');
