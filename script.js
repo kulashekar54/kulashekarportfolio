@@ -23,7 +23,7 @@ function scrollToSection(id) {
   document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
 }
 
-// Navbar background change on scroll
+// Navbar background on scroll
 const header = document.getElementById('siteHeader');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) header.classList.add('scrolled');
