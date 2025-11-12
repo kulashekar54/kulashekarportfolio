@@ -1,150 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kulashekar S — Portfolio</title>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kulashekar — Mobile Developer & UI/UX Designer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav" id="siteHeader">
+    <div class="nav-inner container">
+      <div class="logo">Kulashekar<span>.</span></div>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <a class="btn-resume" href="KULASHEKAR.pdf" download>Download Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero container">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <h3>Mobile App Developer & UI/UX Designer</h3>
+        <h1>Hi, I’m <span class="accent">Kulashekar</span>.</h1>
+        <p>
+          I build cross-platform Android & iOS applications using <strong>.NET MAUI</strong> and craft beautiful
+          <strong>UI/UX designs</strong> using Figma. Passionate about scalable architecture and modern experiences.
+        </p>
+
+        <div class="hero-ctas">
+          <button class="btn-primary" onclick="scrollToSection('#projects')">View Projects</button>
+          <button class="btn-outline" onclick="scrollToSection('#contact')">Contact Me</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <img src="assets/developer-illustration.png" alt="Developer illustration">
+        </div>
+        <div class="tech-bubble tech1">.NET MAUI</div>
+        <div class="tech-bubble tech2">Figma</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="section">
     <div class="container">
-      <a class="navbar-brand" href="#">Kulashekar S</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+      <h2 class="section-title">What I Do Best</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Cross-Platform Development</h4>
+          <p>.NET MAUI & Xamarin.Forms with MVVM architecture and API integration.</p>
+        </div>
+        <div class="skill-card">
+          <h4>UI & UX Design</h4>
+          <p>Designing modern, responsive mobile interfaces using Figma.</p>
+        </div>
+        <div class="skill-card">
+          <h4>API Integration</h4>
+          <p>Building RESTful APIs and integrating Firebase for dynamic data handling.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Version Control</h4>
+          <p>Using Git, GitHub & CI/CD workflows for stable releases and teamwork.</p>
+        </div>
       </div>
     </div>
-  </nav>
+  </section>
 
-  <!-- HERO -->
-  <section id="hero" class="hero-section">
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section">
     <div class="container">
-      <div class="row flex-column-reverse flex-lg-row align-items-center">
-        <div class="col-lg-6 hero-text" alinment="center">
-          <h1>Hello, I'm <span style="font-weight:800">Kulashekar S</span></h1>
-          <p class="lead">Mobile App Developer focusing on cross-platform apps with <strong>C#</strong>, <strong>.NET MAUI</strong> &amp; <strong>Xamarin.Forms</strong>.</p>
-          <p>Currently contributing to product development at <strong>Thapovan Info Systems</strong>, building scalable mobile features and integrating REST APIs.</p>
-          <div class="mt-3">
-            <a class="hero-btn" href="#portfolio"><i class="fa-solid fa-arrow-right"></i> View My Apps</a>
-            <a href="mailto:kulashekar5420@gmail.com" class="btn btn-outline-light custom ms-3">Contact</a>
-          </div>
-        </div>
-        <div class="col-lg-6 text-center hero-image mb-4 mb-lg-0">
-          <img src="images/imgboy.png"  loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
+      <h2 class="section-title">Experience</h2>
 
-  <!-- ABOUT -->
-  <section id="about" class="container py-5">
-    <div class="about-card">
-      <img class="about-avatar" src="/images/profile.jpg" alt="Avatar">
-      <div class="about-bio">
-        <h3>About Me</h3>
-        <p>I build cross-platform mobile applications using .NET MAUI, Xamarin.Forms, REST APIs, and Firebase. I also design UI/UX flows in Figma and deliver polished mobile experiences.</p>
-        <div class="socials">
-          <a class="social github" href="https://github.com/kulashekar54" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="social linkedin" href="https://www.linkedin.com/in/kulashekar5420/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-          <a class="social email" href="mailto:kulashekar5420@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Thapovan Info Systems Inc.</h4>
+          <p class="meta">Feb 2024 – Present | Mobile Application Developer</p>
+          <p>Migrated Xamarin.Forms apps to .NET MAUI, implemented Dark/Light themes, custom Handlers, and integrated APIs.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Thapovan Info Systems Inc.</h4>
+          <p class="meta">Oct 2023 – Jan 2024 | Developer Intern</p>
+          <p>Built CRUD mobile apps with MVVM structure and RESTful APIs using Xamarin.Forms.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="container py-4">
-    <h2 class="mb-3">Work Experience</h2>
-    <div class="exp-card">
-      <h5>Thapovan Info Systems — Mobile Application Developer</h5>
-      <p class="text-muted small mb-2">Dec 2023 – Present · Chennai, India</p>
-      <ul>
-        <li>Developing cross-platform mobile apps using .NET MAUI and C#.</li>
-        <li>Designing UI/UX layouts in Figma.</li>
-        <li>Integrating REST APIs and Firebase.</li>
-        <li>Leading internal <strong>Fitness App</strong> prototype development.</li>
-      </ul>
-    </div>
-  </section>
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
 
-  <!-- SKILLS -->
-  <section id="skills" class="container py-5">
-    <h2 class="section-title">Skills & Technologies</h2>
-    <div class="skills-wrap">
-      <div class="skill"><div class="meta"><div class="name">C#</div><div class="tag">90%</div></div><div class="progress"><i class="p-react" data-level="90"></i></div></div>
-      <div class="skill"><div class="meta"><div class="name">Java</div><div class="tag">85%</div></div><div class="progress"><i class="p-java" data-level="85"></i></div></div>
-      <div class="skill"><div class="meta"><div class="name">.NET MAUI</div><div class="tag">80%</div></div><div class="progress"><i class="p-maui" data-level="80"></i></div></div>
-      <div class="skill"><div class="meta"><div class="name">Xamarin.Forms</div><div class="tag">82%</div></div><div class="progress"><i class="p-xamarin" data-level="82"></i></div></div>
-      <div class="skill"><div class="meta"><div class="name">MVVM</div><div class="tag">88%</div></div><div class="progress"><i class="p-mvvm" data-level="88"></i></div></div>
-      <div class="skill"><div class="meta"><div class="name">RESTful APIs</div><div class="tag">80%</div></div><div class="progress"><i class="p-api" data-level="80"></i></div></div>
-      <div class="skill"><div class="meta"><div class="name">Firebase</div><div class="tag">75%</div></div><div class="progress"><i class="p-firebase" data-level="75"></i></div></div>
-    </div>
-  </section>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="assets/collegego-placeholder.jpg" alt="">
+          <h4>CollegeGo App</h4>
+          <p>Xamarin.Forms • C# • MVVM • API</p>
+        </div>
 
-  <!-- PROJECTS -->
-  <section id="portfolio" class="container py-5">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="/images/projects/collegego.png" alt="CollegeGo">
-        <div class="project-body">
-          <h5>CollegeGo</h5>
-          <p>A student app with CRUD and API integration for better academic workflow.</p>
-          <a href="#" class="btn btn-outline-dark custom">View Project</a>
+        <div class="project-card">
+          <img src="assets/hostel-placeholder.jpg" alt="">
+          <h4>Hostel Management System</h4>
+          <p>Android • Java • Firebase • MVVM</p>
         </div>
-      </div>
-      <div class="project-card">
-        <img src="/images/projects/hostel-management.png" alt="Hostel Management">
-        <div class="project-body">
-          <h5>Hostel Management System</h5>
-          <p>Android app for managing canteen orders, gate passes, and suggestions.</p>
-          <a href="#" class="btn btn-outline-dark custom">View Project</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="/images/projects/fitness-app.png" alt="Fitness App">
-        <div class="project-body">
-          <h5>Fitness App (In Progress)</h5>
-          <p>Designing a modern fitness app UI in Figma; development in .NET MAUI coming soon.</p>
-          <a href="#" class="btn btn-outline-dark custom disabled">Coming Soon</a>
+
+        <div class="project-card">
+          <img src="assets/gym-ui-placeholder.jpg" alt="">
+          <h4>Gym Fitness App</h4>
+          <p>Figma • UI Design • .NET MAUI (Upcoming)</p>
+          <span class="badge">In Progress</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="container py-5 text-center">
-    <h2>Get in Touch</h2>
-    <p class="text-muted mb-4">Have a project idea or want to collaborate? Let's connect!</p>
-    <a class="btn btn-dark btn-lg" href="mailto:kulashekar5420@gmail.com">Email Me</a>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <p>Email: <strong>kulashekar5420@gmail.com</strong></p>
+      <p>Location: Chennai, Tamil Nadu, India</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/kulashekar5420" target="_blank">LinkedIn</a>
+        <a href="https://github.com/kulashekar54" target="_blank">GitHub</a>
+      </div>
+    </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
   <footer>
-    © <span id="year"></span> Kulashekar S · Mobile App Developer
+    <p>© 2025 Kulashekar — Building Seamless Mobile Experiences</p>
   </footer>
 
-  <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
