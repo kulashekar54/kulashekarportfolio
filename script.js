@@ -1,28 +1,32 @@
-// Update year
-document.getElementById("year").textContent = new Date().getFullYear();
+// ===== Theme Toggle =====
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
 
-// Animate skill progress bars when visible
-document.addEventListener("DOMContentLoaded", () => {
-  const bars = document.querySelectorAll(".skill .progress i");
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        el.style.width = el.dataset.level + "%";
-        obs.unobserve(el);
-      }
-    });
-  }, { threshold: 0.3 });
-  bars.forEach(b => observer.observe(b));
+// Load saved theme
+if (localStorage.getItem('theme') === 'light') {
+  body.classList.add('light');
+  themeToggle.textContent = '☀️';
+} else {
+  body.classList.remove('light');
+  themeToggle.textContent = '🌙';
+}
+
+// Toggle theme
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('light');
+  const isLight = body.classList.contains('light');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  themeToggle.textContent = isLight ? '☀️' : '🌙';
 });
 
-// Smooth scroll for navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  });
+// ===== Smooth Scroll =====
+function scrollToSection(id) {
+  document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+// ===== Navbar background on scroll =====
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
 });
